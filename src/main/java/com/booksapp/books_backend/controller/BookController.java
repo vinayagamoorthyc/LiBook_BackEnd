@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.booksapp.books_backend.model.Book;
+import com.booksapp.books_backend.model.MustBook;
 import com.booksapp.books_backend.service.BookService;
 
 @RestController
@@ -27,18 +27,18 @@ public class BookController {
     private BookService service;
 
     @PostMapping(value = "/create")
-    public String createBook(@RequestBody Book book){
+    public String createBook(@RequestBody MustBook book){
         service.addOrUpdate(book);
         return book.getBookId();
     }
 
     @GetMapping(value = "/getAll")
-    public Iterable<Book> getBooks(){
+    public Iterable<MustBook> getBooks(){
         return service.listAll();
     }
 
     @PutMapping(value = "/edit/{id}")
-    private Book update(@RequestBody Book bookup,@PathVariable (name = "id")String bookId){
+    private MustBook update(@RequestBody MustBook bookup,@PathVariable (name = "id")String bookId){
         bookup.setBookId(bookId);
         service.addOrUpdate(bookup);
         return bookup;
@@ -50,7 +50,7 @@ public class BookController {
     }
 
     @RequestMapping("/search/{id}")
-    private Book getBook(@PathVariable("id") String bookId){
+    private MustBook getBook(@PathVariable("id") String bookId){
         return service.getBookById(bookId);
     }
 

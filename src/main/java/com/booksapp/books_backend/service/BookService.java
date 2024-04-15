@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.booksapp.books_backend.model.Book;
+import com.booksapp.books_backend.model.MustBook;
 import com.booksapp.books_backend.repository.BookRepository;
 
 @Service
@@ -14,11 +14,11 @@ public class BookService {
     @Autowired
     private BookRepository repository;
 
-    public void addOrUpdate(Book book) {
+    public void addOrUpdate(MustBook book) {
         repository.save(book);
     }
 
-    public Iterable<Book> listAll() {
+    public Iterable<MustBook> listAll() {
         return this.repository.findAll();
     }
 
@@ -26,7 +26,7 @@ public class BookService {
         repository.deleteById(bookId);
     }
 
-    public Book getBookById(String bookId) {
+    public MustBook getBookById(String bookId) {
         return repository.findById(bookId).get();
     }
 

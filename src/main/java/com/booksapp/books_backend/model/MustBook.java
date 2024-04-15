@@ -11,11 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Book {
+public class MustBook {
     @Id
     private String bookId;
     private String name;
+    private String url;
     private String author;
     private String year;
+    private String desc;
 
 }
