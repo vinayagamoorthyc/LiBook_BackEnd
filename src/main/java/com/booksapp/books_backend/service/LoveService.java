@@ -3,19 +3,20 @@ package com.booksapp.books_backend.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.booksapp.books_backend.model.TopBooks;
-import com.booksapp.books_backend.repository.TopRepository;
+import com.booksapp.books_backend.model.LoveBooks;
+import com.booksapp.books_backend.repository.LoveRepository;
 
 @Service
-public class TopService {
-    @Autowired
-    private TopRepository repository;
+public class LoveService {
 
-    public void addOrUpdate(TopBooks book) {
+    @Autowired
+    private LoveRepository repository;
+
+    public void addOrUpdate(LoveBooks book) {
         repository.save(book);
     }
 
-    public Iterable<TopBooks> listAll() {
+    public Iterable<LoveBooks> listAll() {
         return this.repository.findAll();
     }
 
@@ -23,7 +24,7 @@ public class TopService {
         repository.deleteById(bookId);
     }
 
-    public TopBooks getBookById(String bookId) {
+    public LoveBooks getBookById(String bookId) {
         return repository.findById(bookId).get();
     }
     
