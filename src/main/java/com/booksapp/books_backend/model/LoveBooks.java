@@ -19,5 +19,6 @@ public class LoveBooks {
     private String url;
     private String author;
     private String year;
+    private String category="LoveBooks";
     private String desc;
 }

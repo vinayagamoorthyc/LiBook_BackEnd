@@ -18,6 +18,7 @@ public class MustBook {
     private String url;
     private String author;
     private String year;
+    private String category = "MustRead";
     private String desc;
 
 }

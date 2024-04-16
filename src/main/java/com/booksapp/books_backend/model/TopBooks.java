@@ -18,5 +18,6 @@ public class TopBooks {
     private String url;
     private String author;
     private String year;
+    private String category = "TopBooks";
     private String desc;
 }
