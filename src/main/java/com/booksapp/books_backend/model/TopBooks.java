@@ -7,11 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection="mustRead")
+@Document(collection = "topStories")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MustBook {
+public class TopBooks {
     @Id
     private String bookId;
     private String name;
@@ -19,5 +19,4 @@ public class MustBook {
     private String author;
     private String year;
     private String desc;
-
 }
