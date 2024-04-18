@@ -1,0 +1,5 @@
+spring:
+    data:
+        mongodb:
+            uri : mongodb+srv://VinayagaMoorthy27:Vinayaga2709@vinayagadb.o991msv.mongodb.net/?retryWrites=true&w=majority&appName=VinayagaDB
+            database : SpringBoot_Project
