@@ -1,14 +1,8 @@
-# Use an OpenJDK runtime as the base image
-FROM openjdk:11-jre-slim
+FROM maven:3.8.3-openjdk-17 AS built
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy the JAR file built from your Spring Boot application into the container
-COPY .mvn/maven-wrapper.jar /app/maven-wrapper.jar
-
-# Expose the port that your Spring Boot application runs on
+FROM openjdk:17.0.1-jdk-slim
+COPY --from=built /target/demo-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
-
-# Command to run your Spring Boot application when the container starts
-CMD ["java", "-jar", "maven-wrapper.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
