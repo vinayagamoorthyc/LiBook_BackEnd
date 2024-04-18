@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the JAR file built from your Spring Boot application into the container
-COPY target/maven-wrapper.jar /app/maven-wrapper.jar
+COPY .mvn/maven-wrapper.jar /app/maven-wrapper.jar
 
 # Expose the port that your Spring Boot application runs on
 EXPOSE 8080
