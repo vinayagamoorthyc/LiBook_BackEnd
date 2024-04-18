@@ -1,0 +1,13 @@
+com/booksapp/books_backend/controller/TopController.class
+com/booksapp/books_backend/service/TopService.class
+com/booksapp/books_backend/repository/LoveRepository.class
+com/booksapp/books_backend/model/TopBooks.class
+com/booksapp/books_backend/repository/BookRepository.class
+com/booksapp/books_backend/repository/TopRepository.class
+com/booksapp/books_backend/model/LoveBooks.class
+com/booksapp/books_backend/service/LoveService.class
+com/booksapp/books_backend/BooksBackendApplication.class
+com/booksapp/books_backend/controller/LoveController.class
+com/booksapp/books_backend/model/MustBook.class
+com/booksapp/books_backend/controller/BookController.class
+com/booksapp/books_backend/service/BookService.class

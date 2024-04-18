@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.booksapp.books_backend.BooksBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.599 s -- in com.booksapp.books_backend.BooksBackendApplicationTests
